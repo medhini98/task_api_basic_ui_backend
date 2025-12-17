@@ -2,8 +2,20 @@ from fastapi import FastAPI, HTTPException, Request, status
 from datetime import datetime
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI() #creating instance of fastapi
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/") #define route using this decorator - tells FastAPI that func root handles GET requests to root URL ("/")
 async def root():
