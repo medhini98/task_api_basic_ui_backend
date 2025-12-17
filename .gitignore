@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Type checking / tooling
+.mypy_cache/
+.pytype/
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+
+# Env/config
+.env
+.env.*
+*.sqlite3
+
+# Project-specific
+# (keep your in-memory app clean)
